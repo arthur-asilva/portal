@@ -1,0 +1,94 @@
+.centerContent{
+    justify-content: center;
+    align-items: center;
+}
+
+.card{
+    position: relative;
+    width: 300px;
+    height: 350px;
+    background-color: #fff;
+    border-radius: 9px;
+    padding: 10px 20px;
+    box-shadow: 8px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card h2{
+    width: 100%;
+    text-align: center;
+}
+
+.cardLogin::before{
+    content: '';
+    display: block;
+    width: 300px;
+    height: 350px;
+    position: absolute;
+    left: -300px;
+    top: 0px;
+    background-image: url('../public/login-card-bg.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position-x: 60px;
+    filter: grayscale(0.8);
+    transition: 0.3s;
+}
+
+.card:hover.cardLogin::before{
+    background-position-x: 0px;
+    filter: unset;
+}
+
+.control{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.control input{
+    border: none;
+    padding: 10px;
+    z-index: 1;
+    border-bottom: 2px solid #6a93cb;
+    background-color: transparent;
+}
+
+.control .label{
+    margin-left: 10px;
+    margin-top: 10px;
+    position: absolute;
+    transition: 0.3s;
+}
+
+.control input{
+    outline: none;
+}
+
+.control input:focus + .label, .control input:not(:placeholder-shown) + .label{
+    font-size: 12px;
+    transform: translate(-10px, -22px);
+    color: #6a93cb;
+}
+
+.button{
+    border: none;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    border-radius: 7px;
+    background-color: #a29bfe;
+    box-shadow: 3px 4px #6c5ce7;
+    font-weight: bold;
+    color: #fff;
+    font-size: 16px;
+    letter-spacing: 4px;
+    transition: 0.3s;
+}
+
+.button:hover{
+    cursor: pointer;
+    background-color: #74b9ff;
+}
